@@ -1,0 +1,35 @@
+<div class="widget-header">
+	<h3><?php echo __('General settings'); ?></h3>
+</div>
+<div class="widget-content">
+	<div class="control-group">
+		<?php echo Form::label('setting_stats_id', __('Profile ID'), array('class' => 'control-label')); ?>
+		<div class="controls">
+			<?php echo Form::input('setting[stats_id]', $plugin->get('stats_id'), array(
+				'id' => 'setting_stats_id', 'class' => ''
+			)); ?>
+		</div>
+	</div>
+</div>
+
+
+<!--div class="widget-header spoiler-toggle" data-spoiler=".logs-spoiler" data-icon="clock-o">
+	<h3><?php echo __('Log settings'); ?></h3>
+</div>
+<div class="widget-content spoiler logs-spoiler">
+	<div class="well">
+		<?php echo UI::button(__('Clear logs older 30 days'), array(
+			'icon' => UI::icon( 'trash-o fa-lg' ),
+			'class' => 'btn btn-warning btn-large',
+			'data-url' => 'log.clear_old',
+			'data-method' => Request::POST
+		)); ?>
+	</div>
+	
+	<div class="control-group">
+		<label class="control-label"><?php echo __( 'Logs level' ); ?></label>
+		<div class="controls">
+			<?php echo Form::select( 'setting[site][log_level]', Log::levels(), (int) Config::get('site', 'log_level' )); ?>
+		</div>
+	</div>
+</div-->
